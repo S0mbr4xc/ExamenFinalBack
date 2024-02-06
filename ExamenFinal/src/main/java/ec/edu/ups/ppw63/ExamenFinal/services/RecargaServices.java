@@ -4,8 +4,6 @@ import java.util.List;
 
 import ec.edu.ups.ppw63.ExamenFinal.business.GestionRecarga;
 import ec.edu.ups.ppw63.ExamenFinal.model.Recarga;
-import ec.edu.ups.ppw63.demo63.model.Cliente;
-import ec.edu.ups.ppw63.demo63.services.ErrorMessage;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -24,7 +22,7 @@ public class RecargaServices {
 	@Path("list")
 	public Response getClientes(){
 		List<Recarga> recargas = gRecargas.getRecargas();
-		if(clientes.size()>0)
+		if(recargas.size()>0)
 			return Response.ok(recargas).build();
 		
 		ErrorMessage error = new ErrorMessage(6, "No se registran recargas");
