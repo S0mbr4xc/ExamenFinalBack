@@ -2,31 +2,31 @@ package ec.edu.ups.ppw63.ExamenFinal.model;
 
 public class Transaccion {
 
-	private int cOrigen;
-	private int cDestino;
-	private float monto;
-	public Transaccion(int cOrigen, int cDestino, float monto) {
+	private String cOrigen;
+	private String cDestino;
+	private double monto;
+	public Transaccion(String cOrigen, String cDestino, float monto) {
 		super();
 		this.cOrigen = cOrigen;
 		this.cDestino = cDestino;
 		this.monto = monto;
 	}
-	public int getcOrigen() {
+	public String getcOrigen() {
 		return cOrigen;
 	}
-	public void setcOrigen(int cOrigen) {
+	public void setcOrigen(String cOrigen) {
 		this.cOrigen = cOrigen;
 	}
-	public int getcDestino() {
+	public String getcDestino() {
 		return cDestino;
 	}
-	public void setcDestino(int cDestino) {
+	public void setcDestino(String cDestino) {
 		this.cDestino = cDestino;
 	}
-	public float getMonto() {
+	public double getMonto() {
 		return monto;
 	}
-	public void setMonto(float monto) {
+	public void setMonto(double monto) {
 		this.monto = monto;
 	}
 	

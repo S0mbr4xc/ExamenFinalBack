@@ -1,15 +1,22 @@
 package ec.edu.ups.ppw63.ExamenFinal.model;
 
+import java.util.Date;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Cuenta {
+public class Recarga {
 	
 	@Id
+	@GeneratedValue
 	private int codigo;
+	
 	private String numero;
-	private double saldo;
+	private double monto;
+	private Date fecha;
+	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -22,16 +29,16 @@ public class Cuenta {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public double getSaldo() {
-		return saldo;
+	public double getMonto() {
+		return monto;
 	}
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
+	public void setMonto(double monto) {
+		this.monto = monto;
 	}
-	@Override
-	public String toString() {
-		return "Cuenta [codigo=" + codigo + ", numero=" + numero + ", saldo=" + saldo + "]";
+	public Date getFecha() {
+		return fecha;
 	}
-	
-	
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
 }

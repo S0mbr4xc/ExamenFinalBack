@@ -38,10 +38,10 @@ public class CuentaDAO {
 		return q.getResultList();
 	}
 	
-	public Cuenta getClientePorCedula(String cedula){
-		String jpql = "SELECT c FROM Cliente c WHERE c.dni = :cedula";
+	public Cuenta getCuentaPorNumero(String num){
+		String jpql = "SELECT c FROM Cuenta c WHERE c.numero = :num";
 		Query q = em.createQuery(jpql, Cuenta.class);
-		q.setParameter("cedula", cedula);
+		q.setParameter("numero", num);
 		List<Cuenta> clientes = q.getResultList();
 		if(clientes.size()>0)
 			return clientes.get(0);
